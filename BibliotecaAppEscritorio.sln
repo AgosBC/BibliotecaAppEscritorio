@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaAppEscritorio", "BibliotecaAppEscritorio.csproj", "{6BAA5536-9C6A-4E2C-BEFF-500B00A942ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{725E7932-6A0B-42A8-82E5-0D748E87BCFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{9063EBF5-0FEE-4326-B466-CFCBF747743F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{6BAA5536-9C6A-4E2C-BEFF-500B00A942ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BAA5536-9C6A-4E2C-BEFF-500B00A942ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BAA5536-9C6A-4E2C-BEFF-500B00A942ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{725E7932-6A0B-42A8-82E5-0D748E87BCFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{725E7932-6A0B-42A8-82E5-0D748E87BCFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{725E7932-6A0B-42A8-82E5-0D748E87BCFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{725E7932-6A0B-42A8-82E5-0D748E87BCFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9063EBF5-0FEE-4326-B466-CFCBF747743F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9063EBF5-0FEE-4326-B466-CFCBF747743F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9063EBF5-0FEE-4326-B466-CFCBF747743F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9063EBF5-0FEE-4326-B466-CFCBF747743F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,5 +31,30 @@ namespace BibliotecaAppEscritorio
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LAñadirL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GBAñadirL_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
