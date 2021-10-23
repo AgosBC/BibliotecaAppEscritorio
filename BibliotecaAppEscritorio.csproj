@@ -83,5 +83,11 @@
   <ItemGroup>
     <None Include="Resources\libros.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Services\Services.csproj">
+      <Project>{9063ebf5-0fee-4326-b466-cfcbf747743f}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

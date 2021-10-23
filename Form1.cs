@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,15 @@ namespace BibliotecaAppEscritorio
 {
     public partial class Form1 : Form
     {
+        private BibliotecaService biblioService = new BibliotecaService(); //declaro bibloteca service
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            biblioService.cargarImagen(PBImagen);//llamo al metodo cargarImagen de biblioservice y el parametro es el nombre que indique en el diseño
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -52,7 +59,20 @@ namespace BibliotecaAppEscritorio
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void TBTitulo_TextChanged(object sender, EventArgs e)//verificar los cambios del campo de texto
+        {
+            if (TBTitulo.Text.Equals(""))//.Text obtiene datos del campo de texto
+            {
+                LTitulo.ForeColor = Color.Black; // defino un color para la label LTitulo CUANDO ESTE VACIO
+
+            }else
+            {
+                LTitulo.ForeColor = Color.Green;//cuando empiezo a escribir, el label de titulo se pondra en verde
+                LTitulo.Text = "Titulo"; 
+            }
+        }
+
+        private void TBTitulo_KeyPress(object sender, KeyPressEventArgs e)//obtiene la info del teclado
         {
 
         }
