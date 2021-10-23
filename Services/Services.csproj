@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BibliotecaService.cs" />
+    <Compile Include="libreria\Librery.cs" />
+    <Compile Include="libreria\TextBoxEvent.cs" />
     <Compile Include="libreria\UploadImg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -123,6 +123,7 @@ namespace BibliotecaAppEscritorio
             this.TBApellido.TabIndex = 4;
             this.TBApellido.Text = "Apellido";
             this.TBApellido.TextChanged += new System.EventHandler(this.TBApellido_TextChanged);
+            this.TBApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBApellido_KeyPress);
             // 
             // dateTimePicker1
             // 

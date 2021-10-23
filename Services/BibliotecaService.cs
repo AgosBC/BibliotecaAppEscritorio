@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Services
 {
-    public class BibliotecaService : UploadImg // hereda de la clase 
+    public class BibliotecaService : Librery // hereda de la clase que contiene dentro objetos de libreria (textBoxEvent, Upload img etc) 
     {
          
 

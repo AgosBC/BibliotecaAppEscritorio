@@ -21,7 +21,7 @@ namespace BibliotecaAppEscritorio
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            biblioService.cargarImagen(PBImagen);//llamo al metodo cargarImagen de biblioservice y el parametro es el nombre que indique en el diseño
+            biblioService.uploadImg.cargarImagen(PBImagen);//llamo al metodo cargarImagen de biblioservice y el parametro es el nombre que indique en el diseño
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace BibliotecaAppEscritorio
 
         private void TBTitulo_KeyPress(object sender, KeyPressEventArgs e)//obtiene la info del teclado
         {
-
+            
         }
 
         private void TBAutor_TextChanged(object sender, EventArgs e)
@@ -96,7 +96,7 @@ namespace BibliotecaAppEscritorio
 
         private void TBAutor_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            biblioService.textBoxEvent.textKeyPress(e);
         }
 
         private void TBSerie_TextChanged(object sender, EventArgs e)
@@ -157,9 +157,16 @@ namespace BibliotecaAppEscritorio
 
         }
 
+        private void TBApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            biblioService.textBoxEvent.textKeyPress(e);
+
+        }
+
         private void TBAutor_StyleChanged(object sender, EventArgs e)
         {
-           
         }
+
+        
     }
 }
