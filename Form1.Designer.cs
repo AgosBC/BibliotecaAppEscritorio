@@ -33,6 +33,7 @@ namespace BibliotecaAppEscritorio
             this.GBCabecera = new System.Windows.Forms.GroupBox();
             this.miBiblio = new System.Windows.Forms.Label();
             this.GBInsertar = new System.Windows.Forms.GroupBox();
+            this.TBApellido = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
             this.LEstado = new System.Windows.Forms.Label();
@@ -89,6 +90,7 @@ namespace BibliotecaAppEscritorio
             this.GBInsertar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.GBInsertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.GBInsertar.Controls.Add(this.TBApellido);
             this.GBInsertar.Controls.Add(this.dateTimePicker1);
             this.GBInsertar.Controls.Add(this.comboBoxEstado);
             this.GBInsertar.Controls.Add(this.LEstado);
@@ -105,19 +107,32 @@ namespace BibliotecaAppEscritorio
             this.GBInsertar.Controls.Add(this.TBAutor);
             this.GBInsertar.Location = new System.Drawing.Point(7, 112);
             this.GBInsertar.Name = "GBInsertar";
-            this.GBInsertar.Size = new System.Drawing.Size(376, 577);
+            this.GBInsertar.Size = new System.Drawing.Size(376, 624);
             this.GBInsertar.TabIndex = 0;
             this.GBInsertar.TabStop = false;
+            // 
+            // TBApellido
+            // 
+            this.TBApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TBApellido.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBApellido.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.TBApellido.Location = new System.Drawing.Point(10, 321);
+            this.TBApellido.Multiline = true;
+            this.TBApellido.Name = "TBApellido";
+            this.TBApellido.Size = new System.Drawing.Size(348, 29);
+            this.TBApellido.TabIndex = 4;
+            this.TBApellido.Text = "Apellido";
+            this.TBApellido.TextChanged += new System.EventHandler(this.TBApellido_TextChanged);
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePicker1.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 407);
+            this.dateTimePicker1.Location = new System.Drawing.Point(10, 445);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(146, 28);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dateTimePicker1.TabIndex = 7;
             this.dateTimePicker1.Value = new System.DateTime(2021, 10, 21, 0, 0, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -125,17 +140,17 @@ namespace BibliotecaAppEscritorio
             // 
             this.comboBoxEstado.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEstado.FormattingEnabled = true;
-            this.comboBoxEstado.Location = new System.Drawing.Point(198, 406);
+            this.comboBoxEstado.Location = new System.Drawing.Point(196, 444);
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Size = new System.Drawing.Size(160, 29);
-            this.comboBoxEstado.TabIndex = 7;
+            this.comboBoxEstado.TabIndex = 8;
             // 
             // LEstado
             // 
             this.LEstado.AutoSize = true;
             this.LEstado.BackColor = System.Drawing.Color.Transparent;
             this.LEstado.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LEstado.Location = new System.Drawing.Point(194, 379);
+            this.LEstado.Location = new System.Drawing.Point(192, 417);
             this.LEstado.Name = "LEstado";
             this.LEstado.Size = new System.Drawing.Size(69, 24);
             this.LEstado.TabIndex = 0;
@@ -146,7 +161,7 @@ namespace BibliotecaAppEscritorio
             this.LPublicacion.AutoSize = true;
             this.LPublicacion.BackColor = System.Drawing.Color.Transparent;
             this.LPublicacion.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LPublicacion.Location = new System.Drawing.Point(10, 378);
+            this.LPublicacion.Location = new System.Drawing.Point(8, 416);
             this.LPublicacion.Name = "LPublicacion";
             this.LPublicacion.Size = new System.Drawing.Size(148, 24);
             this.LPublicacion.TabIndex = 0;
@@ -157,7 +172,7 @@ namespace BibliotecaAppEscritorio
             this.LNum.AutoSize = true;
             this.LNum.BackColor = System.Drawing.Color.Transparent;
             this.LNum.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LNum.Location = new System.Drawing.Point(283, 342);
+            this.LNum.Location = new System.Drawing.Point(281, 379);
             this.LNum.Name = "LNum";
             this.LNum.Size = new System.Drawing.Size(23, 24);
             this.LNum.TabIndex = 0;
@@ -168,7 +183,7 @@ namespace BibliotecaAppEscritorio
             this.LSerie.AutoSize = true;
             this.LSerie.BackColor = System.Drawing.Color.Transparent;
             this.LSerie.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LSerie.Location = new System.Drawing.Point(10, 316);
+            this.LSerie.Location = new System.Drawing.Point(8, 353);
             this.LSerie.Name = "LSerie";
             this.LSerie.Size = new System.Drawing.Size(54, 24);
             this.LSerie.TabIndex = 0;
@@ -203,27 +218,29 @@ namespace BibliotecaAppEscritorio
             this.saveBotton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.saveBotton.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBotton.ForeColor = System.Drawing.Color.Black;
-            this.saveBotton.Location = new System.Drawing.Point(130, 498);
+            this.saveBotton.Location = new System.Drawing.Point(130, 530);
             this.saveBotton.Name = "saveBotton";
             this.saveBotton.Size = new System.Drawing.Size(110, 41);
-            this.saveBotton.TabIndex = 8;
+            this.saveBotton.TabIndex = 9;
             this.saveBotton.Text = "GUARDAR";
             this.saveBotton.UseVisualStyleBackColor = false;
             // 
             // TBNum
             // 
             this.TBNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBNum.Location = new System.Drawing.Point(312, 340);
+            this.TBNum.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBNum.Location = new System.Drawing.Point(310, 377);
             this.TBNum.Multiline = true;
             this.TBNum.Name = "TBNum";
             this.TBNum.Size = new System.Drawing.Size(46, 29);
-            this.TBNum.TabIndex = 5;
+            this.TBNum.TabIndex = 6;
+            this.TBNum.TextChanged += new System.EventHandler(this.TBNum_TextChanged);
+            this.TBNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBNum_KeyPress);
             // 
             // TBTitulo
             // 
             this.TBTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBTitulo.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBTitulo.Location = new System.Drawing.Point(10, 211);
             this.TBTitulo.Multiline = true;
             this.TBTitulo.Name = "TBTitulo";
@@ -235,12 +252,14 @@ namespace BibliotecaAppEscritorio
             // TBSerie
             // 
             this.TBSerie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBSerie.Location = new System.Drawing.Point(10, 340);
+            this.TBSerie.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBSerie.Location = new System.Drawing.Point(8, 377);
             this.TBSerie.Multiline = true;
             this.TBSerie.Name = "TBSerie";
             this.TBSerie.Size = new System.Drawing.Size(264, 29);
-            this.TBSerie.TabIndex = 4;
+            this.TBSerie.TabIndex = 5;
+            this.TBSerie.TextChanged += new System.EventHandler(this.TBSerie_TextChanged);
+            this.TBSerie.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBSerie_KeyPress);
             // 
             // PBImagen
             // 
@@ -258,12 +277,17 @@ namespace BibliotecaAppEscritorio
             // TBAutor
             // 
             this.TBAutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBAutor.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBAutor.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.TBAutor.Location = new System.Drawing.Point(10, 278);
             this.TBAutor.Multiline = true;
             this.TBAutor.Name = "TBAutor";
-            this.TBAutor.Size = new System.Drawing.Size(348, 29);
+            this.TBAutor.Size = new System.Drawing.Size(346, 29);
             this.TBAutor.TabIndex = 3;
+            this.TBAutor.Text = "Nombre";
+            this.TBAutor.TextChanged += new System.EventHandler(this.TBAutor_TextChanged);
+            this.TBAutor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBAutor_KeyPress);
+            this.TBAutor.StyleChanged += new System.EventHandler(this.TBAutor_StyleChanged);
             // 
             // LAñadirL
             // 
@@ -375,6 +399,7 @@ namespace BibliotecaAppEscritorio
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBoxEstado;
+        private System.Windows.Forms.TextBox TBApellido;
     }
 }
 

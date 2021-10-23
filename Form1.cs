@@ -76,5 +76,90 @@ namespace BibliotecaAppEscritorio
         {
 
         }
+
+        private void TBAutor_TextChanged(object sender, EventArgs e)
+        {
+            if (TBAutor.Text.Equals(""))
+            {
+                LAutor.ForeColor = Color.Black; 
+
+            }
+            else
+            {
+                LAutor.ForeColor = Color.Green;
+                LAutor.Text = "Autor";
+                TBAutor.ForeColor = Color.Black;
+                TBAutor.Font = new Font("Corbel", 11.0f, FontStyle.Regular);
+            }
+
+        }
+
+        private void TBAutor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void TBSerie_TextChanged(object sender, EventArgs e)
+        {
+            if (TBSerie.Text.Equals(""))
+            {
+                LSerie.ForeColor = Color.Black;
+
+            }
+            else
+            {
+                LSerie.ForeColor = Color.Green;
+                LSerie.Text = "Serie";
+            }
+
+        }
+
+        private void TBSerie_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void TBNum_TextChanged(object sender, EventArgs e)
+        {
+            if (TBNum.Text.Equals(""))
+            {
+                LNum.ForeColor = Color.Black;
+
+            }
+            else
+            {
+                LNum.ForeColor = Color.Green;
+                LNum.Text = "#";
+            }
+
+        }
+
+        private void TBNum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void TBApellido_TextChanged(object sender, EventArgs e)
+        {
+
+            if (TBApellido.Text.Equals(""))
+            {
+                TBApellido.ForeColor = Color.LightGray;
+
+            }
+            else
+            {
+                TBApellido.ForeColor = Color.Black;
+                TBApellido.Font = new Font("Corbel", 11.0f, FontStyle.Regular);
+                
+
+            }
+
+        }
+
+        private void TBAutor_StyleChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
