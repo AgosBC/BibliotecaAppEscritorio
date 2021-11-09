@@ -13,10 +13,20 @@ namespace BibliotecaAppEscritorio
 {
     public partial class Form1 : Form
     {
-        private BibliotecaService biblioService = new BibliotecaService(); //declaro bibloteca service
+        private BibliotecaService biblioService; //declaro bibloteca service
         public Form1()
         {
             InitializeComponent();
+
+            var listTextBox = new List<TextBox>();
+            listTextBox.Add(TBAutor);
+            listTextBox.Add(TBApellido);
+            listTextBox.Add(TBSerie);
+            listTextBox.Add(TBNum);
+            listTextBox.Add(TBTitulo);
+            biblioService = new BibliotecaService(listTextBox);
+
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -121,6 +131,7 @@ namespace BibliotecaAppEscritorio
 
         private void TBNum_TextChanged(object sender, EventArgs e)
         {
+            
             if (TBNum.Text.Equals(""))
             {
                 LNum.ForeColor = Color.Black;
@@ -132,11 +143,13 @@ namespace BibliotecaAppEscritorio
                 LNum.Text = "#";
             }
 
+            
+
         }
 
         private void TBNum_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            biblioService.textBoxEvent.numberKeyPress(e);
         }
 
         private void TBApellido_TextChanged(object sender, EventArgs e)
